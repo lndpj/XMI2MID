@@ -202,23 +202,6 @@ An XMI file can contain multiple songs because `CAT XMID` is a catalog of repeat
 - Preserved IFF odd-length chunk padding handling when scanning root chunks, catalog children, and sequence-local chunks.
 - Added validation for truncated root IFF chunk headers, `CAT` child chunk headers, `FORM XMID` local chunk headers, and chunk payload lengths.
 - Preserved MIDI Format 0 output, 960 PPQN timing, XMI note-duration handling, tempo rescaling, SysEx pass-through, meta-event pass-through, and pending note-off flushing in the header API.
-- Updated README usage examples to use `Reference/AIL2/DEMO.XMI` consistently.
-- Updated README usage documentation for default conversion, `--list`, `--sequence`, and `--all`.
-- Added README documentation for the header-only API, including indexed conversion and all-sequence conversion examples.
-- Added README XMI specification notes covering the EA IFF-style layout, `XDIR/INFO`, `CAT XMID`, repeated `FORM XMID` sequence chunks, `TIMB`, `RBRN`, and `EVNT`.
-- Documented XMI event-stream behavior: summed delay bytes, omitted zero delays, no running status, Note On duration payloads, removed Note Off events, 120 Hz quantization, and MIDI delta scaling.
-- Documented the AIL/XMIDI controller range from 110 through 120.
-- Documented how multi-song XMI files are created and selected in the original AIL2 tooling and runtime.
-- Added numbered README references with synopses and direct links for ModdingWiki, VGMPF, and John Miles' KE5FX site.
-- Confirmed `Reference/AIL2/DEMO.XMI` contains three `FORM XMID` sequences.
-- Verified header multi-song conversion against a synthetic two-sequence XMI file.
-- Verified header sequence discovery, sequence count, indexed conversion, and all-sequence conversion against `Reference/AIL2/DEMO.XMI`.
-- Verified CLI `--list`, default sequence-0 conversion, `--sequence`, and `--all` against `Reference/AIL2/DEMO.XMI`.
-- Verified CLI `--list`, `--sequence 1`, and `--all` against a synthetic two-sequence XMI file.
-- Verified default sequence-0 output matches explicit `--sequence 0` output for `Reference/AIL2/DEMO.XMI`.
-- Verified `--all` sequence-0 output matches default sequence-0 output for `Reference/AIL2/DEMO.XMI`.
-- Rebuilt successfully with `./build.sh`.
-- Cleaned generated build outputs with `./build.sh clean`.
 
 ## 2026-04-24
 
